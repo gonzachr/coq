@@ -1,0 +1,17 @@
+Module NatPlayground.
+  
+Inductive nat : Type :=
+| O
+| S : nat -> nat.
+
+Check (S O).
+
+Definition pred (n : nat) : nat :=
+  match n with
+  | O => O
+  | S n' => n'
+  end.
+
+Compute (pred(S(S O))).
+
+End NatPlayground.
