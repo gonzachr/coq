@@ -8,6 +8,6 @@ Lemma equality_of_functions_commutes:
 
 Proof.
   intros.
-  rewrite <- H.
+  rewrite H.
   reflexivity.
 Qed.
