@@ -2,7 +2,7 @@ Module NatDefs.
 
 
 Theorem S_n_eq_add : forall n : nat,
-    S n = 1 + n.
+    1 + n = S n.
 Proof.
   intros.
   simpl.
@@ -10,11 +10,11 @@ Proof.
 Qed.
 
 Theorem mult_S_1 : forall n m : nat,
-    m = S n ->
+    S n = m ->
     m * (1 + n) = m * m.
 Proof.
   intros.
-  rewrite <- S_n_eq_add.
-  rewrite <- H.
+  rewrite S_n_eq_add.
+  rewrite H.
   reflexivity.
 Qed.
